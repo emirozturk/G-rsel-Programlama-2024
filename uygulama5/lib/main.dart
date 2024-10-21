@@ -13,8 +13,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return Platform.isAndroid?
-    MaterialApp(
+    return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo),
@@ -22,7 +21,7 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: TextField(
+          title: const TextField(
             decoration: InputDecoration(
               icon: Icon(Icons.search),
               hintText: "Search",
@@ -32,7 +31,7 @@ class MyApp extends StatelessWidget {
         ),
         body: GridviewOrnek(),
         bottomNavigationBar: BottomNavigationBar(
-          items: [
+          items: const [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: "Anasayfa"),
             BottomNavigationBarItem(
                 icon: Icon(Icons.favorite), label: "Favoriler"),

@@ -18,6 +18,8 @@ class ExpandedOrnek extends StatelessWidget {
     "eleman2",
     "eleman3",
   ];
+
+  ExpandedOrnek({super.key});
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -26,8 +28,8 @@ class ExpandedOrnek extends StatelessWidget {
             height: 250,
             child: Image.network(
                 "https://miro.medium.com/v2/resize:fit:952/1*OAXivevUVDA6ddtq-7jwVw.gif")),
-        SizedBox(height: 50, child: Text("2. Parça")),
-        SizedBox(height: 50, child: Text("3. Parça")),
+        const SizedBox(height: 50, child: Text("2. Parça")),
+        const SizedBox(height: 50, child: Text("3. Parça")),
         Expanded(
           child: ListView.builder(
             itemCount: liste.length,

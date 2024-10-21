@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 
 class TextfieldOrnek extends StatefulWidget {
+  const TextfieldOrnek({super.key});
+
   @override
   State<TextfieldOrnek> createState() => _TextfieldOrnekState();
 }
@@ -16,12 +18,12 @@ class _TextfieldOrnekState extends State<TextfieldOrnek> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        TextField(
+        const TextField(
           obscureText: true,
         ),
         TextField(
             enabled: false, autocorrect: true, controller: ciktiController),
-        TextField(
+        const TextField(
           decoration: InputDecoration(
             hintText: "İpucu metni",
             icon: Icon(Icons.camera),
@@ -35,8 +37,8 @@ class _TextfieldOrnekState extends State<TextfieldOrnek> {
             onPressed: () => setState(() {
                   ciktiController.text = telefonFormati.getUnmaskedText();
                 }),
-            child: Text("Tıkla")),
-        Card(
+            child: const Text("Tıkla")),
+        const Card(
           elevation: 5,
           color: Colors.white,
           child: SizedBox(
